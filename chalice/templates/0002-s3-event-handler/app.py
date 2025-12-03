@@ -12,4 +12,5 @@ S3_BUCKET = os.environ.get('APP_BUCKET_NAME', '')
 
 @app.on_s3_event(bucket=S3_BUCKET, events=['s3:ObjectCreated:*'])
 def s3_handler(event):
-    app.log.debug(f"Received event for bucket: {event.bucket}, key: {event.key}")
+    app.log.debug(f"Received event for bucket: 
+                    {event.bucket}, key: {event.key}")
