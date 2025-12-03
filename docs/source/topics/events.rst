@@ -125,8 +125,7 @@ Here's an example:
     @app.on_s3_event(bucket='mybucket-name',
                      events=['s3:ObjectCreated:*'])
     def handle_s3_event(event):
-        app.log.debug("Received event for bucket: %s, key: %s",
-                      event.bucket, event.key)
+        app.log.debug(f"Received event for bucket: {event.bucket}, key: {event.key}")
 
 In this example above, Chalice connects the S3 bucket to the
 ``handle_s3_event`` Lambda function such that whenever an object is uploaded

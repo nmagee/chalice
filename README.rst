@@ -63,8 +63,7 @@ You can connect a lambda function to an S3 event:
 
     @app.on_s3_event(bucket='mybucket')
     def handler(event):
-        print("Object uploaded for bucket: %s, key: %s"
-              % (event.bucket, event.key))
+        print(f"Object uploaded for bucket: {event.bucket}, key: {event.key}")
 
 As well as an SQS queue:
 
